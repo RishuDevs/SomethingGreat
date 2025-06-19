@@ -16,7 +16,12 @@ import random
 import logging
 import aiohttp
 import config
-from config import API_URL, API_KEY
+from os import getenv
+from dotenv import load_dotenv
+
+#tessst
+API_URL = getenv("API_URL", "https://api.thequickearn.xyz") #youtube song url
+API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/RahulTC
 
 
 def cookie_txt_file():
@@ -36,7 +41,7 @@ async def download_song(link: str):
         if os.path.exists(file_path):
             #print(f"File already exists: {file_path}")
             return file_path
-        
+
     song_url = f"{API_URL}/song/{video_id}?api={API_KEY}"
     async with aiohttp.ClientSession() as session:
         while True:
@@ -113,12 +118,12 @@ async def check_file_size(link):
     info = await get_format_info(link)
     if info is None:
         return None
-    
+
     formats = info.get('formats', [])
     if not formats:
         print("No formats found.")
         return None
-    
+
     total_size = parse_size(formats)
     return total_size
 
