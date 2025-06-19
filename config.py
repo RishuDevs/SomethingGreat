@@ -9,7 +9,7 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
 API_URL = getenv("API_URL", 'https://api.nexgenbots.in') #youtube song url
-API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/RahulTC
+API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/Rishu1286
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 OWNER_USERNAME = getenv("OWNER_USERNAME","Rishu1286")
