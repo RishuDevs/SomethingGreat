@@ -8,12 +8,10 @@ load_dotenv()
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
-API_URL = getenv("API_URL", 'https://api.nexgenbots.in') #youtube song url
-API_KEY = getenv("API_KEY", None) # youtube song api key, get it from https://t.me/Rishu1286
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 OWNER_USERNAME = getenv("OWNER_USERNAME","Rishu1286")
-BOT_USERNAME = getenv("BOT_USERNAME" , "Vip_music_vc_bot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "DikshaMusicBot")
 BOT_NAME = getenv("BOT_NAME" , "RISHU")
 ASSUSERNAME = getenv("ASSUSERNAME" , "Rishu_music")
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
